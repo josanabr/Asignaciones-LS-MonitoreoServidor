@@ -16,7 +16,6 @@ if [ -f config.cfg ]; then
   . config.cfg
 fi
 MEM=$(./freeMem.sh)
-#curl https://api.thingspeak.com/update?api_key=${TSWRITEKEY}\&field1=${MEM}
-curl https://api.thingspeak.com/update?api_key=0PE2VXR5ZZB60N0A\&field1=${MEM}
+curl https://api.thingspeak.com/update?api_key=${TSWRITEKEY}\&field1=${MEM}
 cd ${CWD}
 
