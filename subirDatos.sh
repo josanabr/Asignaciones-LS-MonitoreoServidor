@@ -12,10 +12,8 @@
 BASEPATH=$(dirname "$(realpath ${0})") 
 CWD=$(pwd)
 cd ${BASEPATH}
-if [ -f config.cfg ]; then
-  . config.cfg
-fi
+. config.cfg
 MEM=$(./freeMem.sh)
-curl https://api.thingspeak.com/update?api_key=${TSWRITEKEY}\&field1=${MEM}
+curl https://api.thingspeak.com/update?api_key=${WRITEKEY}\&field1=${MEM}
 cd ${CWD}
 
