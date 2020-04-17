@@ -14,6 +14,6 @@ CWD=$(pwd)
 cd ${BASEPATH}
 . config.cfg
 MEM=$(./freeMem.sh)
-curl https://api.thingspeak.com/update?api_key=${WRITEKEY}\&field1=${MEM}
+curl https://api.thingspeak.com/update?api_key=${TSWRITEKEY}\&field1=${MEM}
 cd ${CWD}
 
